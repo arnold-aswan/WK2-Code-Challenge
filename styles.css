@@ -1,0 +1,60 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+.animals {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.animalCard {
+    border: 1px solid;
+    max-width: 15rem;
+}
+
+.animalImg {
+    width: 100%;
+}
+
+.animalCardBody {
+    padding: .5rem;
+    background: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.animalCardBody h3 {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    color: white;
+    font-weight: 700;
+    padding: .5rem;
+    border-radius: .2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.add {
+    background: #8ecae6;
+}
+
+.btn.reset {
+    background: #e63946;
+}
