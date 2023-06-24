@@ -9,6 +9,7 @@
 
   let li = document.createElement("li")
   li.className = 'animalList'
+  li.setAttribute('name', 'listItem')
 
   li.innerHTML = `
     <article class="animalCard">
@@ -16,10 +17,10 @@
         <img src="${animal.image}" class="animalImg" />
       </div>
       <div class="animalCardBody">
-        <h3>${animal.name}</h4>
+        <h3 class="name" >${animal.name}</h3>
         <p class="votesCount">Votes: ${animal.votes}</p>
         <div class="buttons">
-          <button class="btn add" onClick="addVote()">Add vote</button>
+          <button class="btn add">Add vote</button>
           <button class="btn reset">Reset votes</button>
         </div>
       </div>
@@ -32,14 +33,33 @@ function renderAnimals() {
     fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(characters => characters.forEach(animal => renderAnimal(animal)))
+    
 }
 
  function initialize() {
   renderAnimals()
+  
  }
+
+// function myFunction() {
+  const parentEl = document.querySelector('ul.animals')
+
+  parentEl.addEventListener("click", (e)=> {
+    if (e.target.tagName === 'H3') {
+      const H3Element = e.target
+      const liEl = e.target.parentElement.previousElementSibling.firstElementChild
+      liEl.classList.toggle('hide')
+    }
+  })
+//  }
+
+function addVote() {
+
+}
+
+function resetVotes() {
+
+}
 
  initialize()
 
- function addVote() {
-  alert('hajimemashte')
- }
