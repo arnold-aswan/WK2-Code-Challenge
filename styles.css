@@ -25,6 +25,9 @@ svg {
 .animalImg {
     width: 100%;
 }
+.animalImg.hide {
+    display: none;
+}
 
 .animalCardBody {
     padding: .5rem;
