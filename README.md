@@ -1,5 +1,5 @@
 # Flataculties
-Flataculties is an app where you can vote for the cutest animal.
+Flataculties is a web app where you get to vote for the cutest animal of your choice from a variety of animals,you can also reset the vote count back to 0 if you change your mind about the animal and if you don't like a certain animal just click on it and flaticulties will hide the animal so you don't have to look at them again.
 
 ## Deployed site
 This site is deployed live via github pages on:
