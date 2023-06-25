@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@600&display=swap');
 
 * {
     margin: 0;
@@ -9,6 +10,15 @@ img,
 svg {
     max-width: 100%;
     display: block;
+}
+
+body {
+    font-family: 'Ysabeau SC', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .animals {
@@ -24,6 +34,7 @@ svg {
 
 .animalImg {
     width: 100%;
+    transition: all .5s ease-in-out;
 }
 .animalImg.hide {
     display: none;
@@ -40,11 +51,14 @@ svg {
     cursor: pointer;
 }
 
+.animalCardBody p.votesCount.hide {
+    display: none;
+}
+
 .buttons {
     display: flex;
     justify-content: space-between;
 }
-
 .btn {
     color: white;
     font-weight: 700;
@@ -53,11 +67,9 @@ svg {
     border: none;
     cursor: pointer;
 }
-
 .btn.add {
     background: #8ecae6;
 }
-
 .btn.reset {
     background: #e63946;
 }
